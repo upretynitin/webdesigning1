@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+    body{
+         margin: 0;
+         padding: 0;
+         text-decoration: none;
+         font-family: verdana, Geneva, Tahoma, sans-serif;
+    }
+    header{
+        width: 100%;
+        height: 450px;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .header-image {
+        position: absolute;
+        top: -20vh;
+        z-index: -1;
+        /*animation: blur 2s ease-out;*/
+    }
+    .nav {
+        display: flex;
+        margin: 1vh 10vw;
+        justify-content: space-between;
+        color: white;
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .nav-bar {
+        display: flex;
+    }
+    .nav-bar li {
+        cursor: pointer;
+        font-size: 18px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: lighter;
+        padding-left: 30px;
+        list-style: none;
+    }
+    .head{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 7vh;
+        align-items: center;
+    }
+    .logo{
+        width: 20vw;
+    }
+    .head h3 {
+        font-size: 33px;
+        color: whitesmoke;
+        font-weight: lighter;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .search {
+        display: flex;
+        width: 750px;
+        align-items: center;
+        justify-content: flex-start;
+        border-radius: 10px;
+        background-color: white;
+        padding: 5px 0;
+    }
+    .search input {
+       outline: none;
+       border: none;
+       width: 50%;
+       padding-left: 10px;
+       font-size: 15px;
+    }
+    .search p {
+       color: gray;
+       border-right: 1px solid gray;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+       font-size: 15px;
+       padding-right: 10px;
+    }
+    .search i:first-child {
+       font-size: 20px;
+       color: rgb(252, 119, 119);
+       padding-left: 10px;
+       padding-right: 10px;
+    }
+    .search i {
+       color: gray;
+       padding-left: 10px;
+    }
+    .logo{
+       width: 20vw;
+     }
+    .sec1 {
+       display: flex;
+       justify-content: center;
+       margin-bottom: 70px;
+    }
+    .box {
+       position: relative;
+       cursor: pointer;
+       width: 265px;
+       height: 245px;
+       margin: 3px 5px;
+       overflow: hidden;
+       border-radius: 15px;
+       box-shadow: 0 1px 2px rgb(173, 173, 173);
+       background-color: rgb(243, 240, 240);
+    }
+    .box img {
+       width: 100%;
+       border-radius: 15px;
+       border: 1px solid rgb(204, 203, 203);
+       z-index: -1;
+    /*animation: small 1s ease-out;*/
+    }
+    .white {
+       position: absolute;
+       bottom: 3px;
+       align-items: center;
+       border-radius: 0 0 15px 15px;
+       background-color: white;
+       width: 100%;
+       height: 25%;
+       z-index: 2;
+    }
+    .white p {
+       text-align: center;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+       font-size: 19px;
+       color: rgb(56, 56, 56);
+       letter-spacing: 0.7px;
+   }
+    .middle{
+       margin: 60px 120px;
+    }
+    .sec-2 h2 {
+       font-size: 38px;
+       font-weight: lighter;
+       margin-bottom: 10px;
+    }
+    .sec2 div {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       margin-bottom: 30px;
+    }
+    .sec2 h6 {
+       margin: 0;
+       font-size: 17px;
+       font-weight: lighter;
+       color: rgb(99, 98, 98);
+    }
+    .fa-caret-right,
+    .sec2 span {
+       color: rgb(248, 117, 117);
+    }
+    .box-1 {
+       width: 270px;
+       height: 300px;
+       overflow: hidden;
+       position: relative;
+       border-radius: 8px;
+       cursor: pointer;
+    }
+    .box-1 div {
+       position: absolute;
+       background: linear-gradient(transparent, black);
+       width: 100%;
+       height: 25%;
+       display: flex;
+       align-items: flex-end;
+       bottom: 0;
+    }
+    .box-1 div span:first-child {
+       display: inline-block;
+       color: white;
+       padding-left: 15px;
+       font-size: 18px;
+       padding-bottom: 5px;
+    }
+    .box-1 i {
+       color: white;
+       padding-bottom: 15px;
+    }
+    .box-1 img {
+        width: 270px;
+        height: 300px;
+        object-fit: cover;
+        z-index: -1;
+        animation: blur 2s ease-out;
+    }
+    .sec3 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        margin-bottom: 130px;
+    }
+    .middle h1{
+        font-size: 35px;
+        font-weight: lighter;
+        text-align: center;
+        margin: 50px;
+        color: rgb(56, 56, 56);
+    }
+    .sec-4{
+        display: grid;
+        display: grid;
+        justify-content: center;
+        grid-column-gap: 20px;
+        grid-row-gap: 30px;
+        grid-template-columns: 340px 340px 340px;
+        grid-template-rows: auto;
+    }
+    .box-2 {
+        border: 1px solid rgb(235, 233, 233);
+        box-shadow: 0 1px 3px rgb(226, 223, 223);
+        width: 340px;
+        height: 60px;
+        overflow: hidden;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .box-2 div {
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+    } 
+    .box-2 div span {
+        color: rgb(65, 64, 64);
+        font-size: 19px;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .flexcontact{
+        background: red;
+    }
+    .flexcontact img{
+    	/*width: 280px;
+    	height: 400px;
+    	margin-top: 50px;
+        margin-top: 125px;
+        margin-left: 250px;*/
+    }
+    .address h2{
+    	/*font-size: 40px;
+        margin-left: 550px;
+        margin-top: -436px;*/
+    }
+    .address p{
+    	    margin-left: 534px;
+            margin-top: -10px;
+    }
+    </style>
+</head>
+<body>
+	<!-- header start -->
+	<header>
+		<div class="header-image">
+			 <img src="https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png">
+        </div>
+
+        <!-- nav bar  -->
+        <div class="nav">
+            <div>
+                <h4>Get The App</h4>
+            </div>
+            <ul class="nav-bar">
+                <li>Add Restaurant</li>
+                <li>Log in</li>
+                <li>Sign up</li>
+            </ul>
+        </div>
+
+        <div class="head">
+            <img class="logo" src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png">
+            <h3>Discover the best food & drinks in Delhi NCR</h3>
+            <div class="search">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Ywca, 1, Ashoka Rd, Hanu</p>
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search for restaurant, cuisine or a dish">
+            </div>
+        </div>
+	</header>
+	<!-- header end -->
+
+	<section class="middle">
+        <div class="sec1">
+            <div class="box">
+                <div class="white">
+                    <p>Order Food Online</p>
+                </div>
+                <img src="https://b.zmtcdn.com/webFrontend/64dffaa58ffa55a377cdf42b6a690e721585809275.png?fit=around|402:360&crop=402:360;*,*">
+            </div>
+            <div class="box">
+                <div class="white">
+                    <p>Order Food Online</p>
+                </div>
+                <img src="https://b.zmtcdn.com/webFrontend/64dffaa58ffa55a377cdf42b6a690e721585809275.png?fit=around|402:360&crop=402:360;*,*">
+            </div>
+            <div class="box">
+                <div class="white">
+                    <p>Order Food Online</p>
+                </div>
+                <img src="https://b.zmtcdn.com/webFrontend/64dffaa58ffa55a377cdf42b6a690e721585809275.png?fit=around|402:360&crop=402:360;*,*">
+            </div>
+        </div> <!--sec1 end-->
+
+        <div class="sec2">
+            <h2>Collections</h2>
+            <div>
+                <h6>Explore curated lists of top restaurants, cafes, pubs, and bars in Delhi NCR, based on trends</h6>
+                <span>All collections in Delhi NCR &nbsp;<i class="fas fa-caret-right"></i></span>
+            </div>
+        </div> <!--sec2 end-->
+
+        <div class="sec3">
+            <div class="box-1">
+                <div><span>Newly Opened <br> <span>17 Places <i class="fas fa-caret-right"></i></span> </span>
+                </div>
+                <img src="https://images.unsplash.com/photo-1577056922428-a511301a562d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&w=1000&q=80">
+            </div>
+            <div class="box-1">
+                <div><span>Newly Opened <br> <span>17 Places <i class="fas fa-caret-right"></i></span> </span>
+                </div>
+                <img src="https://images.unsplash.com/photo-1577056922428-a511301a562d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&w=1000&q=80">
+            </div>
+            <div class="box-1">
+                <div><span>Newly Opened <br> <span>17 Places <i class="fas fa-caret-right"></i></span> </span>
+                </div>
+                <img src="https://images.unsplash.com/photo-1577056922428-a511301a562d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&w=1000&q=80">
+            </div>
+            <div class="box-1">
+                <div><span>Newly Opened <br> <span>17 Places <i class="fas fa-caret-right"></i></span> </span>
+                </div>
+                <img src="https://images.unsplash.com/photo-1577056922428-a511301a562d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&w=1000&q=80">
+            </div>
+        </div> <!--sec3 end-->
+
+        <h1>Popular localities in and around <strong> Delhi NCR</strong></h1>
+        <div class="sec-4">
+            <div class="box-2">
+                <div><span>402 - Swarna Jayanti Sadan Deluxe, Dr. B.D. Marg, New Delhi</span><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="box-2">
+                <div><span>42, Meena Bagh, New Delhi</span><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="box-2">
+                <div><span>4, Ferozeshah Road, New Delhi</span><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="box-2">
+                <div><span>C-1/6, Pandara Park, New Delhi 110003</span><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="box-2">
+                <div><span>Bunglow No.9, Teen Murti Lane, </span><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="box-2">
+                <div><span>C-403, Swarna Jayanti Sadan,Dr. B.D. Marg</span><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="box-2">
+                <div><span>2, Lodhi Estate, New Delhi 110003</span><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="box-2">
+                <div><span>AB 89 Shahjahan Road New Delhi 110011</span><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="box-2">
+                <div><span>201, Brahmaputra Apartment, BD Marg, New Delhi. 110001</span><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="box-2">
+                <div><span>2, Jantar Mantar Road, New Delhi 110011</span><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="box-2">
+                <div><span>C-404, Swarna Jayanti Sadan, Dr. B.D. Marg,</span><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="box-2">
+                <div><span>11, Safdarjung Road, New Delhi 110011</span><i class="fas fa-chevron-right"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <h1>Explore options near me <strong></strong></h1>
+
+    <div class="sec-4">
+            <div class="box-2">
+                <div><span>Popular cuisines near me</span><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="box-2">
+                <div><span>Popular restaurant types near me</span><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="box-2">
+                <div><span>4, Ferozeshah Road, New Delhi</span><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="box-2">
+                <div><span>Top Restaurant Chains </span><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="box-2">
+                <div><span>Cities We Deliver To</span><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <
+                </section>
+
+       <section class="sec-5">
+
+        <!-- form -->
+        <div class="flexcontact">
+
+            <!-- form image -->
+            <img class="form" src="https://b.zmtcdn.com/data/pro/5722d9e687511d79616bcab92470734e1596187147.png">
+
+            <!-- form details -->
+            <div class="address">
+                <h2>Get the Zomato App</h2>
+                <p>We will send you a link, open it on your phone to download the app </p>
+                <div class="flex radio">
+
+                    <!-- E-mail  -->
+                    <div>
+                        <input type="radio" name="fill" id="email" checked>
+                        <label for="email">Email</label>
+                    </div>
+
+                    <!-- phone -->
+                    <div>
+                        <input type="radio" name="fill" id="phone">
+                        <label for="phone">Phone</label>
+                    </div>
+                </div>
+                <div class="flex email">
+                    <input class="input" type="text">
+
+                    <!-- E-mail Placeholder -->
+                    <label for="" class="place">Email</label>
+                    <button>Share App Link</button>
+                </div>
+                <p class="download">Download app from</p>
+                <div class="flex app">
+                    <img src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png">
+                    <img src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
